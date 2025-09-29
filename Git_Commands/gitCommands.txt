@@ -2,6 +2,11 @@
 git config user.name
 git config user.email
 
+//add user
+git config --global user.name "<name>"
+git config --global user.email "<email>"
+
+
 git log // get all commit details 
 git log --oneline // give the commits details in one line
 
