@@ -1,0 +1,45 @@
+//list current username and email
+git config user.name
+git config user.email
+
+git log // get all commit details 
+git log --oneline // give the commits details in one line
+
+git init //create git repository local
+git status //current git status
+git add filename  // add changes to stage
+git add . //add all changes to stage
+
+git rm --cached <filename> // to unstage(the staged item not commited)
+
+//checkout to see a commit
+git checkout <commit code> //to see a commit
+git checkout <branch name> //go to the branch
+
+
+//revert
+git revert <commit code>// press "shift" + ":" then type wq ,press enter
+//revert means undone the commit, revert make new commit which undo the specified commit
+
+
+//reset
+git reset <commit code> //it unstage all the commits after the specified commit.
+git reset <commit code> --hard //it delete all the commits after the specified commit permenantly.
+
+//create new branch
+git branch <branch name>
+
+//list all branches
+git branch -a
+
+//checkout to a listed branch
+git checkout <branch name>
+
+
+//delete a branch
+git branch -d <branch name> 
+git branch -D <branch name> //force delete
+
+//create and checkout branch in one line code
+git checkout -b <banch name>
+
