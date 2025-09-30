@@ -1,0 +1,60 @@
+HF BUILD
+
+In my system
+============================================================
+Build HF
+-------
+1.publish the HF.UI.API project
+2.Delete the following files:
+	1.Assests
+	2.Email Templates
+	3.appsettings(all appsettings)
+	4.Web.config
+3.zip the published folder - rename to "Build <Today Date and Time>"
+
+In Server(dev and stage)
+============================================================
+Create New Folder - rename to "Backups"
+	1.Inside Backups folder create two folder
+		a.Backup - inside Backup folder create two more folder
+				1.Dev V3 - for storing Dev backup
+				2.Stage V3 - for storing Stage backup
+		b.Build
+
+	2.Paste the Copied Build zip from my system to Build folder.
+	3.Take Backup
+		Dev and Stage (Take backup for both Dev and Stage)
+		-------------
+		1.Goto Explore -> Goto API -> zip the API
+		2.Reanme the zipped API folder to corresponding site
+			For Dev -> "API <Date>"
+			For Stage -> "API <Date>"
+		3.Paste the zip into Corresponding Dev V3 folder and Stage V3 folder.
+		
+Start Build(Same for dev and stage)
+--------
+1.Stop the site
+2.Goto Explore -> Goto API -> open API folder
+3.Delete the all files Except:
+	1..well known
+	2.Assets
+	3.EmailTemplates
+	4.Logs
+	5.Appsettings
+	6.Web.config
+4.Copy all files from the Build zip and paste here.
+5.If any file present in:
+	Assets
+	EmailTemplates
+	Logs
+	Appsettings
+	Web.config
+ add files to it.
+
+
+Note:: The appsettings will not restart when we start or stop the site.
+       So if any change made to the appsettings , then restart the whole server or recycle the site in the pool.
+
+
+
+
