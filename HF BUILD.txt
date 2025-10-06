@@ -1,19 +1,20 @@
 HF BUILD
+Branch - development
 
 In my system
-============================================================
+=================================================================================
 Build HF
 -------
 1.publish the HF.UI.API project
-2.Delete the following files:
+2.Deselect the following files:
 	1.Assests
 	2.Email Templates
 	3.appsettings(all appsettings)
 	4.Web.config
-3.zip the published folder - rename to "Build <Today Date and Time>"
+3.zip the remaining files and folders - rename to "Build <Today Date and Time>"
 
 In Server(dev and stage)
-============================================================
+=================================================================================
 Create New Folder - rename to "Backups"
 	1.Inside Backups folder create two folder
 		a.Backup - inside Backup folder create two more folder
@@ -25,7 +26,7 @@ Create New Folder - rename to "Backups"
 	3.Take Backup
 		Dev and Stage (Take backup for both Dev and Stage)
 		-------------
-		1.Goto Explore -> Goto API -> zip the API
+		1.Goto Explore -> Goto API -> zip the API folder.
 		2.Reanme the zipped API folder to corresponding site
 			For Dev -> "API <Date>"
 			For Stage -> "API <Date>"
@@ -49,7 +50,7 @@ Start Build(Same for dev and stage)
 	Logs
 	Appsettings
 	Web.config
- add files to it.
+ Add files to it from local system to the live server.
 
 
 Note:: The appsettings will not restart when we start or stop the site.
